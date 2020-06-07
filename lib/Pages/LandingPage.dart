@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:solmusic/Style/Style.dart';
+import 'package:solmusic/Widget/RoundedButton.dart';
+import '../Style/Style.dart';
 
 class LandingPage extends StatefulWidget {
   @override
@@ -33,6 +35,40 @@ class DesktopPage extends StatefulWidget {
 }
 
 class _DesktopPageState extends State<DesktopPage> {
+  Widget customFlexible(String text, String subText, var icon) {
+    return Flexible(
+      flex: 1,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16.0), 
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            CircleAvatar(
+              backgroundColor: Color(0xffF24854),
+              radius: 32.0,
+              child: Icon(icon, color: Colors.white, size: 28.0),
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Text(
+              text,
+              style: ThemText.createText,
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Text(
+              subText,
+              style: ThemText.howitworkDec,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -95,40 +131,14 @@ class _DesktopPageState extends State<DesktopPage> {
                             horizontal: 48.0, vertical: 16.0),
                         child: Row(
                           children: [
-                            Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 16.0),
-                              child: MaterialButton(
-                                height: size.height * 0.09,
-                                minWidth: size.width * 0.15,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(26.0),
-                                ),
-                                onPressed: () {},
-                                color: Color(0xffFC0254),
-                                child: Text(
-                                  "Download Now".toUpperCase(),
-                                  style: ThemText.buttonText,
-                                ),
-                              ),
+                            RoundedButton(
+                              color: Color(0xffFC0254),
+                              textTitle: "download now",
                             ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 16.0),
-                              child: MaterialButton(
-                                height: size.height * 0.09,
-                                minWidth: size.width * 0.15,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(26.0),
-                                ),
-                                onPressed: () {},
-                                color: Color(0xff383B70),
-                                child: Text(
-                                  "Start Free Trail".toUpperCase(),
-                                  style: ThemText.buttonText,
-                                ),
-                              ),
-                            )
+                            RoundedButton(
+                              color: Color(0xff383B70),
+                              textTitle: "start free trial",
+                            ),
                           ],
                         ),
                       ),
@@ -156,23 +166,48 @@ class _DesktopPageState extends State<DesktopPage> {
             color: Colors.white,
             child: Row(
               children: [
-                Container( 
+                Container(
                   alignment: Alignment.center,
-                  width: size.width/2,
+                  width: size.width / 2,
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 26.0),
                     child: Wrap(
                       children: [
-                        Text("Unlimited Access to 100K tracks",
-                        style: ThemText.bigTextTitle,
+                        Text(
+                          "Unlimited Access to 100K tracks",
+                          style: ThemText.bigTextTitle,
                         )
                       ],
                     ),
                   ),
                 ),
-                 Container(
-                  width: size.width/2,
-                  color: Colors.yellow,
+                Container(
+                  width: size.width / 2,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Wrap(
+                        children: [
+                          Padding(
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 16.0),
+                            child: Text(
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.",
+                              style: ThemText.describtionTex,
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 22.0,
+                      ),
+                      RoundedButton(
+                        color: Color(0xffF24854),
+                        textTitle: "try it now",
+                      ),
+                    ],
+                  ),
                 )
               ],
             ),
@@ -183,6 +218,49 @@ class _DesktopPageState extends State<DesktopPage> {
             height: size.height * 0.86,
             width: size.width,
             color: Color(0xff0A183D),
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 32.0, vertical: 16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: size.width * 0.46,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                      child: Text(
+                        "How it works",
+                        style: ThemText.whititleText,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 48.0,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      customFlexible(
+                        "Create an account",
+                        "Lorem ipsum dolor sit amet, consectetur adipi-scing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida.",
+                        Icons.person_pin,
+                      ),
+                       customFlexible(
+                        "Choose a plan",
+                        "Lorem ipsum dolor sit amet, consectetur adipi-scing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida.",
+                        Icons.queue_play_next,
+                      ), 
+                       customFlexible(
+                        "Download Music",
+                        "Lorem ipsum dolor sit amet, consectetur adipi-scing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sus-pendisse ultrices gravida.",
+                        Icons.library_music,
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
           ),
 
           //Our Concept

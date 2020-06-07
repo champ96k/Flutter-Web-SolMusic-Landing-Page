@@ -69,5 +69,36 @@ abstract class ThemText {
     fontWeight: FontWeight.w700,  
   );
 
+   static const TextStyle describtionTex = TextStyle(
+    color: Colors.grey,
+    fontSize: 17.0, 
+    wordSpacing: 1.75,
+    letterSpacing: 1.75,
+    fontWeight: FontWeight.w500,
+  );
+
+  static const TextStyle whititleText = TextStyle(
+    color: Colors.white,
+    fontSize: 60.0,   
+    fontWeight: FontWeight.w600,
+    letterSpacing: 0.75,
+  );
+
+  static const TextStyle createText = TextStyle(
+    color: Colors.white,
+    fontSize: 28.0,  
+  );
+
+  static const TextStyle whitexlText = TextStyle(
+    color: Colors.grey,
+    fontSize: 16.0,
+  );
+
+  static const TextStyle howitworkDec = TextStyle(
+    color: Colors.grey,
+    fontSize: 16.0,
+    fontWeight: FontWeight.w500,
+  );
+
 
 }
