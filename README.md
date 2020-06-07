@@ -7,9 +7,7 @@
 
 
 
-![Alt Text](https://s7.gifyu.com/images/Videos1-1.gif)
-
-![](http://www.reactiongifs.us/wp-content/uploads/2013/10/nuh_uh_conan_obrien.gif)
+![](https://s7.gifyu.com/images/Videos1-1.gif)
 
 
 
