@@ -23,7 +23,7 @@ abstract class ThemText {
 
   static const TextStyle helpGreyText = TextStyle(
     color: Colors.grey,
-    fontSize: 14.0,
+    fontSize: 16.0,
     letterSpacing: 2.75,
   );
 
@@ -98,6 +98,36 @@ abstract class ThemText {
     color: Colors.grey,
     fontSize: 16.0,
     fontWeight: FontWeight.w500,
+  );
+
+  static const TextStyle purpuleText = TextStyle(
+    color: Color(0xff0A183D),
+    fontSize: 58.0, 
+    fontWeight: FontWeight.w700, 
+  ); 
+
+  static const TextStyle cardText = TextStyle(
+    color: Color(0xff0A183D),
+    fontSize: 26.0, 
+    fontWeight: FontWeight.w600, 
+  ); 
+  
+  static const TextStyle footerText =
+      TextStyle(
+        color: Colors.grey,
+        fontSize: 14.0      
+    );
+
+   static const TextStyle pinkText = TextStyle(
+    color: Colors.pink,
+    fontSize: 20.0, 
+    fontWeight: FontWeight.w600
+  );
+
+  static const TextStyle smallWhiteText = TextStyle(
+    color: Colors.white,
+    fontSize: 18.0, 
+    fontWeight: FontWeight.w600
   );
 
 
