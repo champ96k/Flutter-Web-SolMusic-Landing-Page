@@ -1,9 +1,6 @@
 # SolMusic Landing Page
 
 
-
-
-
 ####    Made Using Flutter Web
 
 
@@ -11,6 +8,7 @@
 ![](Videos1.gif)
 
 
+### See demo online [solMusic](https://solmusicdemo.netlify.app/#/)
 
 ## ⚙️ Requirements
 
@@ -25,6 +23,7 @@
   - [Android Studio / IntelliJ](https://flutter.dev/docs/get-started/editor?tab=vscode)
 
 ## 🎉 Develop
+
 
 Run you app in Chrome
 
