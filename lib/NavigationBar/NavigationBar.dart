@@ -12,14 +12,11 @@ class _NavigationBarItemState extends State<NavigationBarItem> {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         if (constraints.maxWidth >= 1200) {
-          //Desktop
           return DesktopNavBar();
         } else if (constraints.maxWidth >= 800 &&
             constraints.maxWidth <= 1200) {
-          //Tablet
           return DesktopNavBar();
         } else {
-          //Mobile
           return MobileNavBar();
         }
       },
