@@ -13,14 +13,15 @@ class RoundedButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: MaterialButton(
-        height: size.height * 0.09,
+        height: size.height * 0.07,
         minWidth: size.width * 0.15,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(26.0),
+          borderRadius: BorderRadius.circular(18.0),
         ),
         onPressed: () {},
         color: color,
-        child: Text(textTitle.toUpperCase(),
+        child: Text(
+          textTitle.toUpperCase(),
           style: ThemText.buttonText,
         ),
       ),
