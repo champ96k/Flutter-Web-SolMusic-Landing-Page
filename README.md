@@ -1,5 +1,7 @@
 # SolMusic Landing Page
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/53f93837-1123-41ab-bb67-b3cf9ec561f4/deploy-status)](https://app.netlify.com/sites/solmusicdemo/deploys)
+
 
 ####    Made Using Flutter Web
 
