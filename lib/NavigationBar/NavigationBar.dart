@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:solmusic/Style/Style.dart';
 
-class NavigationBar extends StatefulWidget {
+class NavigationBarItem extends StatefulWidget {
   @override
-  _NavigationBarState createState() => _NavigationBarState();
+  _NavigationBarItemState createState() => _NavigationBarItemState();
 }
 
-class _NavigationBarState extends State<NavigationBar> {
+class _NavigationBarItemState extends State<NavigationBarItem> {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -36,7 +36,7 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.15,
+      height: MediaQuery.of(context).size.height * 0.1,
       color: Color(0xff08192D),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -48,23 +48,67 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Wrap( 
-                     alignment: WrapAlignment.center,
+                  Wrap(
+                    alignment: WrapAlignment.center,
                     children: [
                       Text(
                         "Sol".toUpperCase(),
                         style: ThemText.titlePinkText,
                       ),
-                      Text("Music".toUpperCase(), 
-                      style: ThemText.titleWhiteText
-                    )
+                      Text("Music".toUpperCase(),
+                          style: ThemText.titleWhiteText)
                     ],
                   ),
-                  Text("Home", style: ThemText.navBarWhiteTab),
-                  Text("About", style: ThemText.navBarWhiteTab),
-                  Text("Pages", style: ThemText.navBarWhiteTab),
-                  Text("News", style: ThemText.navBarWhiteTab),
-                  Text("Contact", style: ThemText.navBarWhiteTab),
+                  TextButton(
+                    onPressed: () {},
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16.0,
+                        vertical: 10.0,
+                      ),
+                      child: Text("Home", style: ThemText.navBarWhiteTab),
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16.0,
+                        vertical: 10.0,
+                      ),
+                      child: Text("About", style: ThemText.navBarWhiteTab),
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16.0,
+                        vertical: 10.0,
+                      ),
+                      child: Text("Pages", style: ThemText.navBarWhiteTab),
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16.0,
+                        vertical: 10.0,
+                      ),
+                      child: Text("News", style: ThemText.navBarWhiteTab),
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16.0,
+                        vertical: 10.0,
+                      ),
+                      child: Text("Contact", style: ThemText.navBarWhiteTab),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -82,29 +126,31 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(2.0),
-                          child: Text("Help", 
-                          style: ThemText.helpGreyText
-                         ),
+                          child: Text("Help", style: ThemText.helpGreyText),
                         ),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Container(
-                              width: 0.75, 
-                              height: 16, 
-                              color: Colors.white
-                            ),
+                              width: 0.75, height: 16, color: Colors.white),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(2.0),
-                          child: Text("Login", 
-                          style: ThemText.loginWhiteText
-                         ),
+                        TextButton(
+                          onPressed: () {},
+                          child: Padding(
+                            padding: const EdgeInsets.all(2.0),
+                            child:
+                                Text("Login", style: ThemText.loginWhiteText),
+                          ),
                         ),
                       ],
                     ),
                   ),
-                  Text("Create an account",
-                      style: ThemText.createAccountPinkText),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Create an account",
+                      style: ThemText.createAccountPinkText,
+                    ),
+                  ),
                 ],
               ),
             ),

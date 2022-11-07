@@ -202,7 +202,9 @@ class _DesktopPageState extends State<DesktopPage> {
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(
-                            horizontal: 48.0, vertical: 16.0),
+                          horizontal: 48.0,
+                          vertical: 16.0,
+                        ),
                         child: Row(
                           children: [
                             RoundedButton(
